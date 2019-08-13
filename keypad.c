@@ -1,0 +1,103 @@
+#include<pic.h>
+void main()
+{
+TRISC=0xf0;
+PORTC=0x00;
+TRISD=0x00;
+PORTD=0x00;
+while(1)
+{
+  RC0=1,RC1=0,RC2=0,RC3=0;
+  {
+    if(RC4==1)
+    {
+      RD0=1;
+      //while(RC4==1);
+    }
+	if(RC5==1)
+    {
+      RD0=0;
+     // while(RC5==1);
+    }
+	if(RC6==1)
+    {
+      RD1=1;
+      //while(RC6==1);
+    } 
+	if(RC7==1)
+    {
+      RD1=0;
+     // while(RC7==1);
+    }   
+  }
+  RC0=0,RC1=1,RC2=0,RC3=0;
+  {
+    if(RC4==1)
+    {
+      RD2=1;
+      //while(RC4==1);
+    }
+	if(RC5==1)
+    {
+      RD2=0;
+      //while(RC5==1);
+    }
+	if(RC6==1)
+    {
+      RD3=1;
+     // while(RC6==1);
+    } 
+	if(RC7==1)
+    {
+      RD3=0;
+     // while(RC7==1);
+    }   
+  }
+  RC0=0,RC1=0,RC2=1,RC3=0;
+  {
+    if(RC4==1)
+    {
+      RD4=1;
+     // while(RC4==1);
+    }
+	if(RC5==1)
+    {
+      RD4=0;
+      //while(RC5==1);
+    }
+	if(RC6==1)
+    {
+      RD5=1;
+     // while(RC6==1);
+    } 
+	if(RC7==1)
+    {
+      RD5=0;
+      //while(RC7==1);
+    }   
+  }
+  RC0=0,RC1=0,RC2=0,RC3=1;
+  {
+    if(RC4==1)
+    {
+      RD6=1;
+      //while(RC4==1);
+    }
+	if(RC5==1)
+    {
+      RD6=0;
+      //while(RC5==1);
+    }
+	if(RC6==1)
+    {
+      RD7=1;
+     // while(RC6==1);
+    } 
+	if(RC7==1)
+    {
+      RD7=0;
+     // while(RC7==1);
+    }   
+  }
+} 
+}
